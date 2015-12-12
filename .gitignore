@@ -1,0 +1,21 @@
+# My configurations:
+tmp
+db_repository
+flask
+search.db
+app.db
+test.db
+my_email_config.py
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
