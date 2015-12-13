@@ -6,7 +6,8 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager
 from flask.ext.openid import OpenID
 from flask.ext.mail import Mail
-from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+from config import basedir, MAIL_SERVER, MAIL_PORT
+from private_config import MAIL_USERNAME, MAIL_PASSWORD, ADMINS
 from .momentjs import momentjs
 from flask.ext.babel import Babel, lazy_gettext
 from flask.json import JSONEncoder

@@ -1,7 +1,7 @@
 from flask.ext.mail import Message
 from app import mail, app
 from flask import render_template
-from config import ADMINS
+from private_config import ADMINS
 from .decorators import async
 
 

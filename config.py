@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import os
-from my_email_config import MAIL_USERNAME, MAIL_PASSWORD, ADMINS as my_admins
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -15,11 +14,6 @@ MAIL_SERVER = 'smtp.sina.com'
 MAIL_PORT = 465
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
-MAIL_USERNAME = MAIL_USERNAME
-MAIL_PASSWORD = MAIL_PASSWORD
-
-# administrator list
-ADMINS = my_admins
 
 # pagination
 POSTS_PER_PAGE = 3

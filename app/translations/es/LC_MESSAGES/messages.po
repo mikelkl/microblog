@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-13 11:03+0800\n"
+"POT-Creation-Date: 2015-12-13 14:58+0800\n"
 "PO-Revision-Date: 2015-12-13 11:03+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
 
-#: app/__init__.py:21
+#: app/__init__.py:22
 msgid "Please log in to access this page."
 msgstr ""
 
@@ -33,7 +33,11 @@ msgstr ""
 msgid "This nickname is already in use. Please choose another one."
 msgstr ""
 
-#: app/views.py:61
+#: app/views.py:38
+msgid "Your post is now live!"
+msgstr ""
+
+#: app/views.py:65
 msgid "Invalid login. Please try again."
 msgstr ""
 
@@ -41,8 +45,61 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: app/templates/edit.html:4
+msgid "Edit Your Profile"
+msgstr ""
+
+#: app/templates/edit.html:10
+msgid "Your nickname:"
+msgstr ""
+
+#: app/templates/edit.html:19
+msgid "About yourself:"
+msgstr ""
+
+#: app/templates/index.html:4
+msgid "Hi, "
+msgstr ""
+
+#: app/templates/index.html:10
+msgid "Say something:"
+msgstr ""
+
+#: app/templates/index.html:30 app/templates/index.html:32
+#: app/templates/user.html:27 app/templates/user.html:29
+msgid "Newer posts"
+msgstr ""
+
+#: app/templates/index.html:35 app/templates/index.html:37
+#: app/templates/user.html:32 app/templates/user.html:34
+msgid "Older posts"
+msgstr ""
+
 #: app/templates/post.html:7
 #, python-format
 msgid "%(nickname)s said %(when)s:"
 msgstr ""
+
+#: app/templates/post.html:9
+msgid "Translate"
+msgstr ""
+
+#: app/templates/user.html:11
+msgid "Last seen on: "
+msgstr ""
+
+#: app/templates/user.html:14
+msgid "Edit your profile"
+msgstr ""
+
+#: app/templates/user.html:16
+msgid "Follow"
+msgstr ""
+
+#: app/templates/user.html:18
+msgid "Unfollow"
+msgstr ""
+
+#~ msgid "%(nickname)s said %(when)s:"
+#~ msgstr ""
 

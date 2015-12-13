@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-13 12:11+0800\n"
-"PO-Revision-Date: 2015-12-13 12:14+0800\n"
+"POT-Creation-Date: 2015-12-13 14:59+0800\n"
+"PO-Revision-Date: 2015-12-13 15:01+0800\n"
 "Language: zh\n"
 "Language-Team: zh <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -33,7 +33,11 @@ msgstr "这个昵称包含无效字符。请用户字母、 数字、 点和下�
 msgid "This nickname is already in use. Please choose another one."
 msgstr "<strong>錯誤</strong>：此帳號已被註冊使用，請另外選擇一個帳號"
 
-#: app/views.py:61
+#: app/views.py:38
+msgid "Your post is now live!"
+msgstr "您的文章发布成功！"
+
+#: app/views.py:65
 msgid "Invalid login. Please try again."
 msgstr "登录无效。请再试一次。"
 
@@ -43,15 +47,15 @@ msgstr "主页"
 
 #: app/templates/edit.html:4
 msgid "Edit Your Profile"
-msgstr "编辑你的资料"
+msgstr "编辑您的个人资料"
 
 #: app/templates/edit.html:10
 msgid "Your nickname:"
-msgstr "你的昵称"
+msgstr "昵称"
 
 #: app/templates/edit.html:19
 msgid "About yourself:"
-msgstr "关于你自己"
+msgstr "关于您自己"
 
 #: app/templates/index.html:4
 msgid "Hi, "
@@ -62,10 +66,12 @@ msgid "Say something:"
 msgstr "说点什么..."
 
 #: app/templates/index.html:30 app/templates/index.html:32
+#: app/templates/user.html:27 app/templates/user.html:29
 msgid "Newer posts"
 msgstr "新文章"
 
 #: app/templates/index.html:35 app/templates/index.html:37
+#: app/templates/user.html:32 app/templates/user.html:34
 msgid "Older posts"
 msgstr "旧文章"
 
@@ -73,3 +79,23 @@ msgstr "旧文章"
 #, python-format
 msgid "%(nickname)s said %(when)s:"
 msgstr "%(nickname) s 说 %(when) s:"
+
+#: app/templates/post.html:9
+msgid "Translate"
+msgstr "翻译"
+
+#: app/templates/user.html:11
+msgid "Last seen on: "
+msgstr "最后看到："
+
+#: app/templates/user.html:14
+msgid "Edit your profile"
+msgstr "编辑您的个人资料"
+
+#: app/templates/user.html:16
+msgid "Follow"
+msgstr "关注"
+
+#: app/templates/user.html:18
+msgid "Unfollow"
+msgstr "取消关注"

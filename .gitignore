@@ -5,7 +5,7 @@ flask
 search.db
 app.db
 test.db
-my_email_config.py
+private_config.py
 
 # Windows:
 Thumbs.db
