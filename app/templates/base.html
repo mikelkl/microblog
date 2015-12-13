@@ -11,6 +11,9 @@
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
+    {% if g.locale != 'en' %}
+    <script src="/static/js/moment-{{ g.locale }}.min.js"></script>
+    {% endif %}
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -25,7 +28,7 @@
           <a href="/" class="brand">microblog</a>
           <ul class="nav">
             <li>
-              <a href="{{ url_for('index') }}">Home</a>
+              <a href="{{ url_for('index') }}">{{ _('Home') }}</a>
             </li>
             {% if g.user.is_authenticated %}
             <li>

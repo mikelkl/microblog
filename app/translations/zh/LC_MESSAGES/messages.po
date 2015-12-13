@@ -1,0 +1,75 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-12-13 12:11+0800\n"
+"PO-Revision-Date: 2015-12-13 12:14+0800\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.1.1\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.6\n"
+
+#: app/__init__.py:22
+msgid "Please log in to access this page."
+msgstr "请登录访问此页面。"
+
+#: app/forms.py:26
+msgid ""
+"This nickname has invalid characters. Please user letters, numbers, dots "
+"and underscores only."
+msgstr "这个昵称包含无效字符。请用户字母、 数字、 点和下划线只。"
+
+#: app/forms.py:31
+msgid "This nickname is already in use. Please choose another one."
+msgstr "<strong>錯誤</strong>：此帳號已被註冊使用，請另外選擇一個帳號"
+
+#: app/views.py:61
+msgid "Invalid login. Please try again."
+msgstr "登录无效。请再试一次。"
+
+#: app/templates/base.html:31
+msgid "Home"
+msgstr "主页"
+
+#: app/templates/edit.html:4
+msgid "Edit Your Profile"
+msgstr "编辑你的资料"
+
+#: app/templates/edit.html:10
+msgid "Your nickname:"
+msgstr "你的昵称"
+
+#: app/templates/edit.html:19
+msgid "About yourself:"
+msgstr "关于你自己"
+
+#: app/templates/index.html:4
+msgid "Hi, "
+msgstr "嗨,"
+
+#: app/templates/index.html:10
+msgid "Say something:"
+msgstr "说点什么..."
+
+#: app/templates/index.html:30 app/templates/index.html:32
+msgid "Newer posts"
+msgstr "新文章"
+
+#: app/templates/index.html:35 app/templates/index.html:37
+msgid "Older posts"
+msgstr "旧文章"
+
+#: app/templates/post.html:7
+#, python-format
+msgid "%(nickname)s said %(when)s:"
+msgstr "%(nickname) s 说 %(when) s:"

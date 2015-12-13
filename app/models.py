@@ -3,6 +3,7 @@ from hashlib import md5
 from app import app
 
 import sys
+import re
 if sys.version_info >= (3, 0):
     enable_search = False
 else:
@@ -77,6 +78,10 @@ class User(db.Model):
 
     def followed_posts(self):
         return Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(followers.c.follower_id == self.id).order_by(Post.timestamp.desc())
+
+    @staticmethod
+    def make_valid_nickname(nickname):
+        return re.sub('[^a-zA-Z0-9_\.]', '', nickname)
 
     def __repr__(self):
         return '<User %r>' % (self.nickname)
