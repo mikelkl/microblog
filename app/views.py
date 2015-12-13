@@ -1,5 +1,5 @@
 from app import app, db, lm, oid, babel
-from flask import render_template, flash, redirect, session, url_for, request, g
+from flask import render_template, flash, redirect, session, url_for, request, g, jsonify
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from .forms import LoginForm, EditForm, PostForm, SearchForm
 from .models import User, Post
@@ -7,6 +7,8 @@ from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
 from .emails import follower_notification
 from flask.ext.babel import gettext
+from guess_language import guessLanguage
+from .translate import microsoft_translate
 
 
 @app.before_request
@@ -27,11 +29,14 @@ def before_request():
 def index(page=1):
     form = PostForm()
     if form.validate_on_submit():
+        language = guessLanguage(form.post.data)
+        if language == 'UNKNOWN' or len(language) > 5:
+            language = ''
         post = Post(
             body=form.post.data, timestamp=datetime.utcnow(), author=g.user)
         db.session.add(post)
         db.session.commit()
-        flash('Your post is now live!')
+        flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
     posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
     return render_template("index.html",
@@ -100,10 +105,11 @@ def user(nickname, page=1):
     if user == None:
         flash('User ' + nickname + ' not found.')
         return redirect(url_for('index'))
-    posts = user.posts.paginate(page, POSTS_PER_PAGE, False)
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(page, POSTS_PER_PAGE, False)
     return render_template('user.html',
                            user=user,
-                           posts=posts)
+                           posts=posts
+                           )
 
 
 @app.route('/edit', methods=['GET', 'POST'])
@@ -194,3 +200,15 @@ def search_results(query):
 def get_locale():
     return request.accept_languages.best_match(LANGUAGES.keys())
     # return 'zh'
+
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate():
+    return jsonify({
+        'text': microsoft_translate(
+            request.form['text'],
+            request.form['sourceLang'],
+            request.form['destLang']
+        )
+    })
